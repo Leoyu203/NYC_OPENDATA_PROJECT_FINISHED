@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>NYC Open Data Project</title>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- LeafletJS JS file (must place after Leaflet's CSS file) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<!-- Use the helper.js file to house additional functions -->
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+   </head>
+
+<body onload="init()">
+  
+	<!-- Banner (topmost) -->
+    <div id="p2">
+		<div> <p> Information </p></div>
+	</div>
+  
+	<!-- Horizontal nav bar with links -->
+	<nav class="container center">
+		<a href="index.html">Home </a>
+		<a href="page1.html">Info</a>
+		<a href="page2.html">Analysis</a>
+	</nav>
+  
+	<!-- Central section -->
+	<div id="body" class="container" >
+	
+    
+    
+    <!-- Main content  -->
+		<div id="content" class="container center" onload="init()">
+
+			<div class="container">
+        <p p style="border-style:double;border-radius:25px;padding:15px;">This dataset contains all job applications submitted through the Borough Offices, through eFiling, or through the HUB, which have a "Latest Action Date" since January 1, 2000. It doesn't include Post Approval Amendments (PAAs). However, it does include detailed information on an applicant's status, location, job type, and filing method. This dataset is useful to hold records and allow applicants to submit job applications. For instance, reviewing job filing patterns across the city and its time periods. Each record in the dataset includes property address, owner and applicant details, and the application status. The dataset is updated regularly and it is a critical resource for those in agriculture, tech, engerinning, resources, as well as, the general public. In this info page, you can filter information based either the Borough or the job type, and then you can see where they applied this job application using the map given on the right.  </p>
+		</div>
+		</div>
+
+	 <div >
+      <input type="text" id="borough" placeholder="Enter borough" > &nbsp; <a class="button" onclick="getJobs()"> Enter Borough </a>
+    </div>
+	<br>
+	 <div >
+      <input type="text" id="jobtype" placeholder="Enter Job Type" > &nbsp; <a class="button" onclick="getTypes()"> Enter Job Type </a>
+    </div>
+    
+	<div id="output" class="container" >
+	  <div id="leftPanel" class="container"></div>
+	  <div id="map"></div>
+	</div>
+	<!-- Footer -->
+	
+
+</body>
+
+</html>

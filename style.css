@@ -1,0 +1,238 @@
+
+}
+body{
+  margin:0 auto; /* sets top and bottom margins to 0 and right and left margins to auto(equal) */
+}
+.container{
+  display:flex;
+  padding:10px;
+  flex-wrap:wrap;
+}
+.center{
+  justify-content:center;
+  align-items:center;
+}
+a{
+  text-decoration:none;
+}
+nav{
+  background-color:cornflowerblue;
+  box-shadow:2px 1px 1px gray;
+  text-align:center;
+  font-family:"Courier New", monospace;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.card{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+}
+nav a{
+  color:white;
+  padding:30px;
+}
+nav a:hover{
+  background-color:rgb(120,120,235);
+  color:white;
+  visibility:visible;
+}
+
+.fitted{
+  max-width:200px;
+  min-width:200px;
+  border-radius:5px;
+  box-shadow:2px 2px 2px gray;
+  background-color:gray;
+}
+
+.button{
+  text-decoration:none;
+  background-color:blue;
+  color:white;
+  border-radius:4px;
+  padding:6px;
+  box-shadow:2px 2px 2px black;
+  cursor: pointer;
+}
+#home{
+  padding:265px;
+  text-align:center;
+  font-size:65pt;
+  color:rgb(250,250,250);
+  font-family:"Lucida Console", "Courier New", monospace;
+  font-weight:bold;
+  text-shadow: 5px 5px 5px black;
+  background-repeat: no-repeat;
+  background-size:1960px,1960px;
+  background-position:center;
+  background-image: url(images/NYC1.jpg);
+}
+
+#p1{
+  padding:215px;
+  text-align:center;
+  font-size:65pt;
+  color:rgb(250,250,250);
+  font-family:"Lucida Console", "Courier New", monospace;
+  font-weight:bold;
+  text-shadow: 5px 5px 5px black;
+  background-repeat: no-repeat;
+  background-size:1950px,1950px;
+  background-position:center;
+  background-image: url(images/NYC2.jpg);
+}
+
+#p2{
+  padding:215px;
+  text-align:center;
+  font-size:65pt;
+  color:rgb(250,250,250);
+  font-family:"Lucida Console", "Courier New", monospace;
+  font-weight:bold;
+  text-shadow: 5px 5px 5px black;
+  background-repeat: no-repeat;
+  background-size:1950px,1950px;
+  background-position:center;
+  background-image: url(images/NYC3.jpg);
+}
+
+
+#map{
+  flex:1;
+  width:90%;
+  margin-top:70px;
+  height:600px;  /* Required for Leaflet map */  
+  border-radius:15px;
+  box-shadow:2px 2px 2px black;
+  background-color:cornflowerblue;
+}
+
+#links{  
+  flex-direction:column;
+  max-width:100px;   /* Use max-width (instead of width) for flex item */
+  background-color: aqua;
+}
+#links a{
+  font-size:8pt;
+  color:black;
+  padding:5px 10px 5px 10px;  
+  box-shadow:2px 2px 2px gray;
+  justify-content:center;
+  align-items:center; 
+  text-align:center;
+}
+#links a:hover{
+  background-color:rgb(200,200,200);
+}
+img:hover{
+  filter: drop-shadow(0px 7px 7px black);
+  margin-top: -15px;
+  margin-bottom: 15px;
+  transition: 1s;
+}
+
+#leftPanel{
+   flex:1;
+   max-height:600px;;
+   overflow-y:scroll;
+}
+
+#overflowTest {
+  background: white;
+  color: black;
+  padding: 15px;
+  width: 25%;
+  height: 150px;
+  position: absolute;
+  bottom: -300px;
+  left: 11.8%;
+}
+#overflowTest2 {
+  background: white;
+  color: black;
+  padding: 15px;
+  width: 25%;
+  height: 150px;
+  position: absolute;
+  bottom: -300px;
+  right: 11.8%;
+}
+#footer{
+  background-color:cornflowerblue;
+  color:white;
+  left: 0;
+  right: 0;
+  bottom:-2000px;
+  font-family:"Courier New", monospace;
+}
+.con{
+  display: flex;
+}
+.topics{
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+#subtopic, .item{
+  flex:1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.relative{
+  position: relative;
+}
+.zoom{
+  transition: 0.2s;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  z-index: 1;
+  padding: 20px; 
+}
+
+.zoom:hover{
+  transition: 0.2s;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  z-index: 1;
+  padding: 20px; 
+}
+.item img{
+  opacity: none;
+}
+
+.item img:hover{
+  opacity: 0.5;
+}
+
+.item p{
+  position: absolute;
+  background-color: white;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+  width: 80%;
+  height: 20%;
+  transition: 0.2s;
+  padding: 20px;
+  overflow: auto;
+  border-radius: 0px;
+}
+
+.item p:hover{
+  z-index:1;
+  width: 80%;
+  height: 20%;
+  transition: 0.2s;
+  padding: 40px;
+  overflow: scroll;
+  border-radius: 10px;
+}
+#chart{
+	height:400px;
+}
